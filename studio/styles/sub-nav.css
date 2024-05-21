@@ -1,0 +1,56 @@
+.sub-nav {
+    height: 55px;
+
+    /* background-color: #282828; */
+    position: relative;
+    top: -2px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+/*  - -- - -- - -- - -- - -- - -- LEFT -- - -- - -- - -- - -- - -- */
+
+
+.channel-dashboard {
+    color: white;
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+
+    padding: 0px 0px 0px 32px;
+}
+
+/*  - -- - -- - -- - -- - -- - -- RIGHT -- - -- - -- - -- - -- - -- */
+
+.sub-nav-buttons {
+    width: 168px;
+    height: 40px;
+
+    margin: 0px 30px -1px 0px;
+    display: flex;
+}
+
+.upload,
+.live,
+.post {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #282828;
+    margin-left: 16px;
+
+    display: grid;
+    place-items: center;
+
+    cursor: pointer;
+}
+
+.sub-nav-buttons img {
+    width: 24px;
+}

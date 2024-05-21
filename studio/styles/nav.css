@@ -1,0 +1,287 @@
+.navigation {
+    height: 64px;
+    background-color: #282828;
+    padding-right: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .3);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 3;
+}
+
+.super-container {
+    width: 1260px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*  - - - - - - - - - - - - - - - - LEFT - - - - - - - - - - - - - - - -  */
+
+.menu {
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.menu-container {
+    width: 24px;
+    fill: #9e9e9e;
+
+    display: flex;
+    justify-content: center;
+
+    margin-left: 24px;
+    margin-right: 22px;
+}
+
+.img-container {
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 100px;
+    height: 24px;
+
+}
+
+/*  - - - - - - - - - - - - - - - - MID - - - - - - - - - - - - - - - -  */
+
+.input-container {
+    max-width: 2000px;
+    /* background-color: rgb(98, 98, 98); */
+
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    position: relative;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    fill: rgb(82, 87, 87);
+
+    position: absolute;
+    left: 211px;
+    z-index: 3;
+}
+
+.search-bar {
+    width: 0;
+    height: 32.40px;
+    max-width: 556px;
+
+    background-color: #282828;
+
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+
+    border: 1px solid #656565;
+    border-radius: 4px;
+
+    margin-left: 195px;
+    padding-left: 57px;
+
+    flex: 1;
+}
+
+.search-bar::placeholder {
+    font-size: 15px;
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+}
+
+
+
+/*  - - - - - - - - - - - - - - - - RIGHT - - - - - - - - - - - - - - - -  */
+
+.create-container {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+}
+
+
+.help-container {
+    width: 40px;
+    height: 40px;
+    fill: rgb(166, 166, 166);
+    margin-right: 7px;
+
+    display: grid;
+    place-content: center;
+}
+
+.help-icon {
+    width: 24px;
+    height: 24px;
+    /* background-color: #282828; */
+}
+
+
+.create-profile-container {
+    height: 34.40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+
+    /* box-sizing: border-box; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-icon {
+    width: 24px;
+    height: 36px;
+    fill: #f84747;
+    margin-left: 10px;
+}
+
+.create {
+    width: 55px;
+    height: 36px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 4px;
+    margin-right: 15px;
+    letter-spacing: .01em;
+
+    display: grid;
+    place-content: center;
+}
+
+.profile-container {
+    width: 60px;
+    height: 34px;
+    margin-left: 2px;
+
+    display: grid;
+    place-content: center;
+
+    position: relative;
+}
+
+.profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+
+/*  - - - -- - - -- - - -- - -- - --  - - -- - - -- - -- - - - - */
+
+.account-menu {
+    width: 300px;
+    height: 345px;
+    background-color: #282828;
+    border-radius: 10px;
+
+    position: absolute;
+    right: 14px;
+    top: 35px;
+
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, .1);
+
+
+}
+
+.account-menu-hide {
+    display: none;
+}
+
+.account-menu-container {
+    display: flex;
+    padding: 14px 18px 16px 18px;
+    border-bottom: 1px solid rgba(170, 170, 170, .2);
+}
+
+.nav-profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.profile-at-container {
+    margin-left: 15px;
+}
+
+.profile-name,
+.profile-at {
+    color: #dadada;
+    font-weight: 500;
+    padding: 1.5px 0px;
+}
+
+/*  ----------------------------------------------------- */
+
+
+.profile-buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(170, 170, 170, .2);
+}
+
+.profile-your-channel,
+.profile-appearance {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-your-channel img {
+    width: 24px;
+    height: 24px;
+    margin-left: 17px;
+}
+
+
+.profile-your-channel div {
+    height: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 16px;
+    padding-top: 5px;
+    margin-right: 91px;
+}
+
+
+
+
+
+.profile-footer {
+    margin-top: 10px;
+}
+
+.profile-appearance img {
+    width: 24px;
+    height: 24px;
+    margin-left: 17px;
+    margin-bottom: 4px;
+}
+
+.profile-appearance div {
+    height: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 16px;
+    margin-right: 21px;
+}

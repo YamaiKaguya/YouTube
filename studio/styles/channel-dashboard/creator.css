@@ -1,0 +1,51 @@
+.creator {
+    align-self: start;
+    background-color: #282828;
+    border-radius: 5px;
+    border: 1px solid rgba(170, 170, 170, .2);
+    margin-top: 22px;
+    padding-bottom: 20px;
+}
+
+.creator-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    padding: 22.5px 0px 18px 24px;
+    margin-bottom: 1px;
+}
+
+.creator-img-container {
+    margin: 0px 24px;
+}
+
+.creator-img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.podcast {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 16.5px 24px 0px 24px;
+}
+
+.benefit {
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: .1px;
+    margin: 8px 24px 0px 24px;
+
+    line-height: 20px;
+    letter-spacing: .00px;
+}
+
+.watch-youtube {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(62, 166, 255);
+    margin: 20px 24px 0px 24px;
+
+    letter-spacing: .1px;
+}

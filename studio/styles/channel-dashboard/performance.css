@@ -1,0 +1,127 @@
+.body-latest-video {
+    background-color: #282828;
+    border-radius: 5px;
+    border: 1px solid rgba(170, 170, 170, .2);
+    margin-top: 22px;
+    padding-bottom: 10px;
+}
+
+
+.dashboard-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    padding: 22.5px 0px 17.5px 24px;
+}
+
+
+
+.dashboard-image {
+    margin: 0px 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-image img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+
+
+.dashboard-stats {
+    padding: 7px 0px;
+    margin: 0px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.three-container {
+    display: flex;
+}
+
+.up-arrow {
+    width: 40px;
+    height: 38px;
+    background-color: #282828;
+}
+
+.number {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: -1px;
+}
+
+.stats,
+.comment,
+.like {
+    display: flex;
+    align-items: center;
+}
+
+.stats-icon {
+    width: 24px;
+    margin-left: -7px;
+    margin-right: 4px;
+}
+
+.comment-icon {
+    width: 16px;
+    margin-left: 24px;
+    margin-right: 6px;
+}
+
+.like-icon {
+    width: 16px;
+    margin-left: 24px;
+    margin-right: 6px;
+}
+
+.up-arrow {
+    width: 25px;
+    margin-right: -4px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.header-line {
+    height: 15.2px;
+    border-top: 1px solid rgba(170, 170, 170, .2);
+    margin: 0px 24px;
+}
+
+.hours {
+    height: 32px;
+    color: #aaa;
+    font-size: 13px;
+    margin: 0px 24px;
+    padding-top: 5px;
+}
+
+.stats-2 {
+    color: white;
+    font-size: 13px;
+    margin: 0px 24px;
+    padding-top: 8px;
+    padding-bottom: 8.8px;
+}
+
+.inv-line {
+    height: 12px;
+}
+
+.analytics,
+.comments {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(62, 166, 255);
+    padding: 9px 0px;
+    margin: 2px 25px;
+    letter-spacing: 0.14px;
+}

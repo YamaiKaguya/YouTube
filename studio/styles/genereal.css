@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #1f1f1f;
+}
+
+* {
+    font-family: roboto,
+        arial;
+}
+
+.main-body {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    right: 0;
+    left: 256px;
+    overflow: auto;
+}
+
+.body-body {
+    background-color: #1f1f1f;
+
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 25px;
+
+    padding-left: 24px;
+    padding-right: 20px;
+    padding-bottom: 700px;
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #282828;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #656565;
+    border-radius: 10px;
+    width: 7px;
+}
+
+
+.hide {
+    /* transition: transform .1s; */
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.show {
+    /* transition: transform .1s; */
+    transform: translate(50%, 50%) scale(0);
+}

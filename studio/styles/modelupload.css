@@ -1,0 +1,124 @@
+.model-background {
+    background-color: rgba(0, 0, 0, .6);
+
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+
+
+}
+
+.model-container {
+    background-color: #282828;
+    border-radius: 5px;
+
+    position: absolute;
+    inset: 48px 287px;
+    z-index: 10;
+}
+
+.model-header {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(170, 170, 170, .2);
+}
+
+.model-title {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 19px 0px 19px 24px;
+}
+
+
+
+.feedback-close {
+    display: flex;
+}
+
+.model-feedback {
+    width: 24px;
+    margin-right: 16px;
+}
+
+.model-close {
+    width: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.model-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.model-upload {
+    width: 136px;
+    margin-top: 107px;
+}
+
+.model-drag {
+    font-weight: 500;
+    color: #e6e6e6;
+    font-size: 15px;
+    margin-top: 24px;
+}
+
+.model-private {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.model-upload-button {
+    font-weight: 500;
+    margin-top: 28px;
+
+    font-size: 14px;
+    /* height: 36px; */
+    padding: 10px 17px;
+    border-radius: 3px;
+    background-color: rgb(62, 166, 255);
+    border: none;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.model-footer {
+    margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.model-footer-first-element,
+.model-footer-second-element {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: .15px;
+}
+
+.model-footer-second-element {
+    margin-top: 9px;
+}
+
+
+/* ano tooooooo */
+#first-step {
+    display: none;
+}
+
+
+
+
+
+
+
+/*  SECOND STEP ---------------------------------------------------------- */

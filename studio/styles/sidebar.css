@@ -1,0 +1,128 @@
+.sidebar {
+    width: 255px;
+    background-color: #282828;
+    border-right: 1px solid rgba(170, 170, 170, .2);
+
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+/*  - -- -- - -- - -- - -- - PROFILE - -- - -- - - -- - -- - */
+
+.nav-profile {
+    height: 208px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav-profile-img {
+    width: 112px;
+    height: 112px;
+    border-radius: 56px;
+    margin-top: 24px;
+}
+
+.nav-profile-info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-profile-info p {
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+    margin: 0px;
+}
+
+.nav-channel {
+    padding-top: 14px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-info {
+    padding-top: 3px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/*  - -- -- - -- - -- - -- - DASHBOARD - -- - -- - - -- - -- - */
+
+.nav-dashboard {
+    width: 100%;
+    height: 313.6px;
+    overflow: auto;
+}
+
+.dashboard-buttons {
+    /* width: 255px; */
+    height: 48px;
+    border-left: 4px solid #282828;
+    font-size: 15px;
+    color: #aaa;
+
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-dashboard {
+    width: 24px;
+    margin-left: 20px;
+    margin-right: 24px;
+}
+
+.dashboard-buttons p {
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+    margin: 0px;
+    height: 24px;
+}
+
+.dashboard-opened {
+    background-color: #1f1f1f;
+    color: #ff4e45;
+    border-left: 4px solid #ff4e45;
+}
+
+/*  - -- -- - -- - -- - -- - BOTTOM - -- - -- - - -- - -- - */
+
+.nav-bottom {
+    border-top: 1px solid rgba(170, 170, 170, .2);
+}
+
+.nav-settings {
+    margin-top: 8px;
+}
+
+.nav-settings,
+.nav-feedback {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.settings-icon,
+.feedback-icon {
+    width: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+
+.nav-bottom p {
+    height: 24px;
+    color: #aaa;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "YouTube Sans", "Roboto", "Arial", sans-serif;
+}
