@@ -27,52 +27,59 @@
 <body>
 
 
+
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
+    $uploadDir = "homepage/UPLOADED-IMAGES/";
+    $uploadFile = $uploadDir . basename($_FILES["image"]["name"]);
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
-        $uploadDir = "homepage/UPLOADED-IMAGES/";
-        $uploadFile = $uploadDir . basename($_FILES["image"]["name"]);
-
-        $imageType = exif_imagetype($_FILES["image"]["tmp_name"]);
-        $allowedTypes = array(IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG);
-        if (!in_array($imageType, $allowedTypes)) {
-            echo "Only JPG, JPEG, and PNG files are allowed.";
-            exit;
-        }
-
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $uploadFile)) {
-            // echo "Image Goods.";
-        } else {
-            echo "Image No Goods";
-        }
-
-        // Retrieve the title from the uploaded file name
-        $title = pathinfo($_FILES["image"]["name"], PATHINFO_FILENAME);
-        // $description = isset($_POST["description"]) ? $_POST["description"] : "";
-
-        $servername = "localhost";
-        $username = "Winter";
-        $password = "082133";
-        $dbname = "youtubedatabase";
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Prepare and execute the SQL statement to insert the image path and title into the database
-        $stmt = $conn->prepare("INSERT INTO videos (imgSrc, videoTitle) VALUES (?, ?)");
-        $stmt->bind_param("ss", $uploadFile, $title);
-        $stmt->execute();
-
-        // echo "Image and Title inserted successfully."; 
-
-        $stmt->close();
-        $conn->close();
-        
-    } else {
-        echo "Image upload failed.";
+    $imageType = exif_imagetype($_FILES["image"]["tmp_name"]);
+    $allowedTypes = array(IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG);
+    if (!in_array($imageType, $allowedTypes)) {
+        echo "Only JPG, JPEG, and PNG files are allowed.";
+        exit;
     }
+
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $uploadFile)) {
+        // echo "Image Goods.";
+    } else {
+        echo "Image No Goods";
+        exit;  // Exit if the file upload fails
+    }
+
+    $title = pathinfo($_FILES["image"]["name"], PATHINFO_FILENAME);
+    // $description = isset($_POST["description"]) ? $_POST["description"] : "";
+
+    $servername = '127.0.0.1';
+    $username = 'Winter';
+    $password = '082133';
+    $dbname = 'youtubedatabase';
+
+    try {
+        $dsn = "mysql:host=$servername;dbname=$dbname";
+        $options = array(
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES   => false,
+        );
+
+        $pdo = new PDO($dsn, $username, $password, $options);
+
+        echo "Connected successfully";
+    } catch (PDOException $e) {
+        die("Connection failed: " . $e->getMessage());
+    }
+
+    // Prepare and execute the SQL statement to insert the image path and title into the database
+    try {
+        $stmt = $pdo->prepare("INSERT INTO videos2 (imgSrc, videoTitle) VALUES (?, ?)");
+        $stmt->execute([$uploadFile, $title]);
+        echo "Record inserted successfully";
+    } catch (PDOException $e) {
+        die("Insertion failed: " . $e->getMessage());
+    }
+    // No need to close the connection explicitly, as it will be closed automatically when the script ends
+}
 ?>
 
         <!--                           ?NAVIGATION BAR                      -->
@@ -371,7 +378,7 @@
                     <div class="uploaded-video-title">CSS Tutorial – Full Course for Beginners</div>
                 </div>
 
-                <div class="video-processing-footer">
+                <!-- <div class="video-processing-footer">
                     <div class="video-processing-icons">
                         <img src="studio/svgs/video-processing/videoprocessing.svg" alt="">
                         <img src="studio/svgs/video-processing/sd.svg" alt="">
@@ -379,7 +386,7 @@
                     </div>
                     <div class="video-processing-text">Upload complete ... Processing will begin shortly</div>
                 </div>
-                <div type="button" class="video-processing-close close-button">Close</div>
+                <div type="button" class="video-processing-close close-button">Close</div> -->
             </div>
 
         </div>
